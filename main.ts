@@ -1,7 +1,7 @@
 import {Application, Router, Request, Response} from "https://deno.land/x/oak/mod.ts";
 
 const env = Deno.env.toObject();
-const PORT = parseInt(env.PORT) || 8080;
+const PORT = parseInt(env.PORT) || 5000;
 
 export const start = ({request, response}: {request: Request, response: Response}): void => {
     response.body = {

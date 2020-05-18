@@ -4,7 +4,7 @@ const env = Deno.env.toObject();
 const PORT = env.PORT || 8000;
 const HOST = env.HOST || "http://localhost";
 
-export const getMetadata = ({request, response}: {request: Request, response: Response}) => {
+export const getMetadata = ({request, response}: {request: Request, response: Response}): void => {
     const metadata = {
         "apiversion": "1",
         "author": "YOUR_GITHUB_USERNAME",
@@ -16,24 +16,22 @@ export const getMetadata = ({request, response}: {request: Request, response: Re
     response.status = 200;
 }
 
-export const start = ({request, response}: {request: Request, response: Response}) => {
+export const start = ({request, response}: {request: Request, response: Response}): void => {
     response.body = {};
     response.status = 200;
 }
 
-export const move = ({request, response}: {request: Request, response: Response}) => {
+export const move = ({request, response}: {request: Request, response: Response}): void => {
     response.body = { move: "right" };
     response.status = 200;
 }
 
-export const end = ({request, response}: {request: Request, response: Response}) => {
+export const end = ({request, response}: {request: Request, response: Response}): void => {
     response.body = {};
     response.status = 200;
 }
 
 const router = new Router();
-
-// routes for Battlesnake API v1
 router.get("/", getMetadata)
 router.post("/start", start)
 router.post("/move", move)

@@ -1,8 +1,7 @@
 import {Application, Router, Request, Response} from "https://deno.land/x/oak/mod.ts";
 
 const env = Deno.env.toObject();
-const PORT = env.PORT || 8000;
-const HOST = env.HOST || "http://localhost";
+const PORT = parseInt(env.PORT) || 8080;
 
 export const getMetadata = ({request, response}: {request: Request, response: Response}): void => {
     const metadata = {
@@ -41,6 +40,5 @@ const app = new Application();
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-console.log(`Listening on ${HOST}:${PORT}...`);
-
-await app.listen({port: 8000});
+console.log(`Listening on port ${PORT}...`);
+await app.listen({port: PORT});

@@ -1,1 +1,1 @@
-deno run --allow-net=:${PORT} --allow-env main.ts
+deno run --allow-net=:${PORT} --allow-env main.ts --port=${PORT}

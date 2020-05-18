@@ -27,7 +27,9 @@ export const root = ({response}: {response: Response}): void => {
     response.body = {
         apiversion: "1",
         "author": "YOUR_GITHUB_USERNAME",
-        color: "#AA22FF"
+        color: "#AA22FF",
+        head: "beluga",
+        tail: "bolt"
     };
     response.status = 200;
 }

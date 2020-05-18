@@ -10,8 +10,8 @@ const PORT = Number(argPort) || Number(env.PORT) || 5000;
 export const start = ({request, response}: {request: Request, response: Response}): void => {
     response.body = {
         color: "#AA22FF",
-        headType: "default",
-        tailType: "default"
+        headType: "beluga",
+        tailType: "bolt"
     };
     response.status = 200;
 }

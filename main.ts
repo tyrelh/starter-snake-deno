@@ -1,9 +1,7 @@
 import {Application, Router, Request, Response} from "https://deno.land/x/oak/mod.ts";
 import * as flags from "https://deno.land/std/flags/mod.ts";
 
-// const env = Deno.env.toObject();
 const argPort = flags.parse(Deno.args).port;
-// console.log("port: ", argPort);
 const PORT = Number(argPort) || 5000;
 
 export const start = ({request, response}: {request: Request, response: Response}): void => {

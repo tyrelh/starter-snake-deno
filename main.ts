@@ -20,12 +20,10 @@ export const move = ({request, response}: {request: Request, response: Response}
 }
 
 export const end = ({request, response}: {request: Request, response: Response}): void => {
-    response.body = {};
     response.status = 200;
 }
 
 export const ping = ({response}: {response: Response}): void => {
-    response.body = {};
     response.status = 200;
 }
 
@@ -40,4 +38,4 @@ app.use(router.routes());
 app.use(router.allowedMethods());
 
 console.log(`Listening on port ${PORT}...`);
-await app.listen({port: PORT});
+await app.listen({ port: PORT });

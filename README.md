@@ -3,6 +3,15 @@ A simple [Battlesnake](https://play.battlesnake.com/) written in TypeScript. Inc
 
 This snake is built using [Deno](https://deno.land/) as a runtime, and the Deno standard http server via [Oak](https://deno.land/x/oak) middleware.
 
+## TL;DR
+* [Requirements](#Requirements): [Deno](https://deno.land/manual/getting_started/installation). Optionally [ngrok](https://ngrok.com/) and [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+* [Setup](#Setup): Clone repo. Install [Deno](https://deno.land/manual/getting_started/installation)
+* [Running the snake locally](#Running-the-snake-locally): `deno run --allow-net app.ts`
+    * Download and run [ngrok](https://ngrok.com/) to develop locally using the [Battlesnake Arena](https://play.battlesnake.com/arena/global/)
+* [Deploy to Heroku](#Deploy-to-Heroku): Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli). Create new app using Deno [buildpack](https://github.com/chibat/heroku-buildpack-deno) Push your code to that app using git
+* [Development](#Development): Checkout the [Battlesnake API docs](https://docs.battlesnake.com/snake-api). Start by editing the `move` function within *app/main.ts*
+* [Testing](#Testing): `deno test`. Add new tests in *tests/*
+
 ## Requirements
 * [Deno](https://deno.land/manual/getting_started/installation)
 * Optionally:

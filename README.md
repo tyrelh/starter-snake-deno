@@ -50,3 +50,17 @@ git push heroku master
 Visit the [Battlesnake API docs](https://docs.battlesnake.com/snake-api) for the latest API info.
 
 Start by adding some logic to the `move` function to choose a different move! Just make sure you are returning one of `"up"`, `"down"`, `"left"`, or `"right"` as moves.
+## Testing
+Deno comes with a built in test runner! To run tests, in the root of your project run
+```bash
+deno test
+```
+By default this will search the whole project for files ending in test (`{*_,}test.{js,ts,jsx,tsx}`).
+
+There are two test files created for you in the *tests/* directory.
+
+In *move_test.ts* you can see the test is using a mock game JSON object of the same type you will be receiving for each call to `/move`. It is testing for the default response of `"right"`. This is set up in a way that you can copy/paste real JSON requests from real games into this file and test that your snake will return an expected response!
+
+You can also add tests for any other functions you create along the way.
+
+In *root_test.ts* the test simply verifying that the response contains the expected fields. It is not testing the content of those fields.

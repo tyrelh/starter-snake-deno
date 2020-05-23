@@ -110,7 +110,15 @@ There are two test files created for you in the *tests/* directory.
 
 In *move_test.ts* you can see the test is using a mock game JSON object of the same type you will be receiving for each call to `/move`. It is testing for the default response of `"right"`. This is set up in a way that you can copy/paste real JSON requests from real games into this file and test that your snake will return an expected response!
 
-You can also add tests for any other functions you create along the way.
+You can also add tests for any other functions you create along the way. To create a new test add another call to `Deno.test` like this
+```typescript
+Deno.test("My test", () => {
+  const result = methodYouAreTesting();
+
+  assert(result?.fieldYouExpect)
+  assert(result.fieldYouExpect === valueYouExpect)
+});
+```
 
 In *root_test.ts* the test simply verifying that the response contains the expected fields. It is not testing the content of those fields.
 

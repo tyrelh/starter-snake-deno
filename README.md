@@ -22,9 +22,9 @@ brew install deno
 ## Running the snake locally
 To run the snake locally type
 ```bash
-deno run --allow-net --allow-env main.ts
+deno run --allow-net app.ts
 ```
-Since Deno has no permissions by default, the `--allow-net` gives your snake network access, and `--allow-env` gives your snake access to environment variables.
+Since Deno has no permissions by default the `--allow-net` gives your snake network access.
 
 ## Deploy to Heroku
 If you don't have the Heroku CLI installed, install it. (Example using Brew on MacOS. Refer to the [Heroku docs](https://devcenter.heroku.com/articles/heroku-cli) for other OSs)

@@ -1,1 +1,1 @@
-web: deno run --allow-net --allow-env main.ts --port=${PORT}
+web: deno run --allow-net --allow-env app.ts --port=${PORT}

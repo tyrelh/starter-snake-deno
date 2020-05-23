@@ -44,6 +44,10 @@ Some things to note about using ngrok to run your snake locally:
 * If you restart the ngrok process it will generate a new random URL for you. That means you need to edit the URL of your snake on the Battlesnake Arena to reflect this.
 
 ## Deploy to Heroku
+Better than running your snake locally is running it on a server!
+
+You can sign up for a free [Heroku](https://www.heroku.com/) account. Their free tier will allow you to run a single snake server 24/7 and you won't use all your allotted time each month. Running multiple servers you make hit that free limit.
+
 If you don't have the Heroku CLI installed, install it. (Example using Brew on MacOS. Refer to the [Heroku docs](https://devcenter.heroku.com/articles/heroku-cli) for other OSs)
 ```bash
 brew install heroku

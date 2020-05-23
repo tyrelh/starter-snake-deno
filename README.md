@@ -18,7 +18,7 @@ This snake is built using [Deno](https://deno.land/) as a runtime, and the Deno 
     * Create new app using Deno [buildpack](https://github.com/chibat/heroku-buildpack-deno)
     * Push your code to that app using git
 * [Development](#Development):
-    * Checkout the [Battlesnake API docs](https://docs.battlesnake.com/snake-api)
+    * Checkout the [Battlesnake API docs](https://docs.battlesnake.com/references/api)
     * Start by editing the `move` function within *app/main.ts*
 * [Testing](#Testing):
     * `deno test`
@@ -93,7 +93,7 @@ git push heroku master
 Note: This Buildpack is installing software on your Heroku server on your behalf. I encourage you to explore that [repo](https://github.com/chibat/heroku-buildpack-deno) and understand what it is doing if you have any concerns.
 
 ## Development
-Visit the [Battlesnake API docs](https://docs.battlesnake.com/snake-api) for the latest API info.
+Visit the [Battlesnake API docs](https://docs.battlesnake.com/references/api) for the latest API info.
 
 Start by adding some logic to the `move` function in *app/main.ts* to choose a different move! Just make sure you are returning one of `"up"`, `"down"`, `"left"`, or `"right"`.
 

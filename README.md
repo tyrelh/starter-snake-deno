@@ -97,6 +97,8 @@ Visit the [Battlesnake API docs](https://docs.battlesnake.com/references/api) fo
 
 Start by adding some logic to the `move` function in *app/main.ts* to choose a different move! Just make sure you are returning one of `"up"`, `"down"`, `"left"`, or `"right"`.
 
+The `gameRequest` object will contain all of the details about the current move, including the board size and state. Once you are comfortable with how the `move` function is returning a direction, look around in the `gameRequest` object for information you can use to make an informed direction decision.
+
 ## Testing
 Deno comes with a built in test runner!
 

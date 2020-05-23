@@ -1,26 +1,10 @@
 import { Application, Router, Request, Response } from "https://deno.land/x/oak/mod.ts";
 import * as flags from "https://deno.land/std/flags/mod.ts";
-import { GameRequest } from "./types.ts";
+import { GameRequest } from "./app/types.ts";
+import { move, root } from "./app/main.ts";
 
 const argPort = flags.parse(Deno.args).port;
 const PORT = Number(argPort) || 5000;
-
-export const root = () => {
-    return {
-        apiversion: "1",
-        author: "<YOUR_GITHUB_USERNAME>",
-        color: "#AA22FF",
-        head: "beluga",
-        tail: "bolt"
-    };
-}
-
-export const move = (gameRequest: GameRequest) => {
-    // Start with your logic here!
-
-    return { move: "right" };
-}
-
 
 const router = new Router();
 router.post("/start", ({request, response}: {request: Request, response: Response}) => {

@@ -113,3 +113,8 @@ In *move_test.ts* you can see the test is using a mock game JSON object of the s
 You can also add tests for any other functions you create along the way.
 
 In *root_test.ts* the test simply verifying that the response contains the expected fields. It is not testing the content of those fields.
+
+## Contributing
+If you have any questions or suggestions feel free to open an Issue or PR on this repo.
+
+You can find other ways to get in touch with me on my [site](https://tyrelh.github.io).

@@ -3,7 +3,7 @@ export interface Game {
     timeout: number
 }
 
-export interface Cell {
+export interface Coordinates {
     x: number,
     y: number
 }
@@ -12,8 +12,8 @@ export interface Snake {
     id: string,
     name: string,
     health: number,
-    body: Cell[],
-    head: Cell,
+    body: Coordinates[],
+    head: Coordinates,
     length: number,
     shout: string
 }
@@ -21,7 +21,7 @@ export interface Snake {
 export interface Board {
     height: number,
     width: number,
-    food: Cell[],
+    food: Coordinates[],
     snakes: Snake[]
 }
 

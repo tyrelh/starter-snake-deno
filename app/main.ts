@@ -3,7 +3,7 @@ import { GameRequest } from "./types.ts";
 export const root = () => {
     return {
         apiversion: "1",
-        author: "<YOUR_GITHUB_USERNAME>",
+        author: "<YOUR_BATTLESNAKE_USERNAME>",
         color: "#AA22FF",
         head: "beluga",
         tail: "bolt"
